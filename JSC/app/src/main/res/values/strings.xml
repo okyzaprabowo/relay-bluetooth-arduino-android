@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JSC</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="jammer">JAMMER</string>
+    <string name="soundmasking">SOUND MASKING</string>
+    <string name="device">FRAME</string>
+</resources>
