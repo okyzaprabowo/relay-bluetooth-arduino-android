@@ -7,91 +7,83 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvSound"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/soundmasking"
+            android:textSize="22sp" />
 
-            <TextView
-                android:id="@+id/tvDevice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="@string/device"
-                android:textSize="22sp" />
-
-            <ToggleButton
-                android:id="@+id/tb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="false"
-                android:checked="true"
-                android:text="@string/on"
-                android:textOff="@string/off"
-                android:textOn="@string/on" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ToggleButton
+            android:id="@+id/tb3"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/on"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            android:checked="true"/>
 
-            <TextView
-                android:id="@+id/tvJammer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="@string/jammer"
-                android:textSize="22sp" />
-
-            <ToggleButton
-                android:id="@+id/tb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/on"
-                android:textOff="@string/off"
-                android:textOn="@string/on"
-                android:checked="true"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvJammer"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="103dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/jammer"
+            android:textSize="22sp" />
 
-            <TextView
-                android:id="@+id/tvSound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="@string/soundmasking"
-                android:textSize="22sp" />
+        <ToggleButton
+            android:id="@+id/tb2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/on"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            android:checked="true"/>
 
-            <ToggleButton
-                android:id="@+id/tb3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/on"
-                android:textOff="@string/off"
-                android:textOn="@string/on"
-                android:checked="true"/>
+        <TextView
+            android:id="@+id/tvDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="203dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/device"
+            android:textSize="22sp" />
 
-        </LinearLayout>
+        <ToggleButton
+            android:id="@+id/tb1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="200dp"
+            android:checked="true"
+            android:text="@string/on"
+            android:textOff="@string/off"
+            android:textOn="@string/on" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

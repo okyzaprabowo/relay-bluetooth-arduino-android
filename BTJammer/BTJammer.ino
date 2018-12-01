@@ -1,8 +1,11 @@
 #include <SoftwareSerial.h>// import the serial library
 
 SoftwareSerial ChannelHC05(10, 11); // RX, TX
-#define JAMMER_PIN 13
-#define MASK_PIN 12
+
+// Relay IN
+#define JAMMER_PIN 2
+#define MASK_PIN 3
+#define FRAME_PIN 4
 
 int BluetoothData;
 
@@ -12,6 +15,8 @@ void setup() {
   ChannelHC05.println(digitalRead(JAMMER_PIN));
   pinMode(JAMMER_PIN,OUTPUT);
   pinMode(MASK_PIN,OUTPUT);
+  pinMode(FRAME_PIN,OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -19,28 +24,40 @@ void loop() {
    if (ChannelHC05.available()) {
     BluetoothData=ChannelHC05.read();
     
-    if(BluetoothData=='3'){
-      digitalWrite(JAMMER_PIN,1);
-      digitalWrite(MASK_PIN,1);
-      ChannelHC05.println("JAMMER ON, MASK ON ");
-    }
-
     if(BluetoothData=='1'){
       digitalWrite(JAMMER_PIN,0);
-      digitalWrite(MASK_PIN,1);
-      ChannelHC05.println("JAMMER OFF, MASK ON ");
+      ChannelHC05.println("JAMMER OFF ");
+      Serial.println("JAMMER OFF ");
     }
 
-    if(BluetoothData=='2'){
+    if(BluetoothData=='0'){
       digitalWrite(JAMMER_PIN,1);
+      ChannelHC05.println("JAMMER ON ");
+      Serial.println("JAMMER ON ");
+    }
+
+    if(BluetoothData=='3'){
       digitalWrite(MASK_PIN,0);
-      ChannelHC05.println("JAMMER ON, MASK OFF ");
+      ChannelHC05.println("MASK OFF ");
+      Serial.println("MASK OFF ");
     }
    
-    if (BluetoothData=='0'){
-      digitalWrite(JAMMER_PIN,0);
-      digitalWrite(MASK_PIN,0);
-      ChannelHC05.println("JAMMER OFF, MASK OFF ");
+    if(BluetoothData=='2'){
+      digitalWrite(MASK_PIN,1);
+      ChannelHC05.println("MASK ON ");
+      Serial.println("MASK ON ");
+    }
+
+    if(BluetoothData=='5'){
+      digitalWrite(FRAME_PIN,0);
+      ChannelHC05.println("FRAME OFF ");
+      Serial.println("FRAME OFF ");
+    }
+
+    if(BluetoothData=='4'){
+      digitalWrite(FRAME_PIN,1);
+      ChannelHC05.println("FRAME ON ");
+      Serial.println("FRAME ON ");
     }
   }
 delay(100);// prepare for next data ...

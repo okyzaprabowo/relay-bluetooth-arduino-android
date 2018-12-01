@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    sendData("3");
+                    sendData("1");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked On", Toast.LENGTH_SHORT);
+                            "You have clicked Off", Toast.LENGTH_SHORT);
                     msg.show();
 
                 } else {
                     // The toggle is disabled
                     sendData("0");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked Off", Toast.LENGTH_SHORT);
+                            "You have clicked On", Toast.LENGTH_SHORT);
                     msg.show();
                 }
             }
@@ -79,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
                     // The toggle is enabled
                     sendData("3");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked On", Toast.LENGTH_SHORT);
+                            "You have clicked Off", Toast.LENGTH_SHORT);
                     msg.show();
 
                 } else {
                     // The toggle is disabled
-                    sendData("0");
+                    sendData("2");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked Off", Toast.LENGTH_SHORT);
+                            "You have clicked On", Toast.LENGTH_SHORT);
                     msg.show();
                 }
             }
@@ -96,16 +96,16 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    sendData("3");
+                    sendData("5");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked On", Toast.LENGTH_SHORT);
+                            "You have clicked Off", Toast.LENGTH_SHORT);
                     msg.show();
 
                 } else {
                     // The toggle is disabled
-                    sendData("0");
+                    sendData("4");
                     Toast msg = Toast.makeText(getBaseContext(),
-                            "You have clicked Off", Toast.LENGTH_SHORT);
+                            "You have clicked On", Toast.LENGTH_SHORT);
                     msg.show();
                 }
             }
